@@ -1,0 +1,71 @@
+#League Imports
+from lcu_driver import Connector
+
+#Python Imports
+import tkinter as tk
+import random
+
+#League Code
+connector = Connector()
+
+async def randSkin(connection):
+
+    skinList = await connection.request('get', '/lol-champ-select/v1/skin-carousel-skins')
+    
+    if(skinList.status != 200):
+        print("Error has occurred")
+    else:
+    
+        skinID = 0
+        skinIDs = []
+        #Converts Json into Json String
+        skinListStr = await skinList.json()
+        
+        #Searches Json for Owned Skins and Sends IDs to List
+        for x in skinListStr:
+            for key, value in x.items():
+                if(key == 'id'):
+                    skinID = value
+            
+                if(key == 'ownership'):
+                    for y, z in value.items():
+                        if(y == 'owned'):
+                            if(z == True):
+                                skinIDs.append(skinID)
+                
+              
+        print('Owned Skin IDs: ', skinIDs)
+        randSkinID = skinIDs[random.randint(0, len(skinIDs) - 1)]
+        print('Random Skin ID: ', randSkinID)
+        
+        data = {
+            "selectedSkinId": randSkinID
+        }
+        
+        skinChange = await connection.request('patch', '/lol-champ-select/v1/session/my-selection', data=data)
+        
+@connector.ready
+async def connect(connection):
+    print('LCU API is ready to be used.')
+    await randSkin(connection)
+
+@connector.close
+async def close(connection):
+    print("Connection has been closed.")
+
+
+#Window Code
+root = tk.Tk()
+root.title('Random Champ Skin')
+
+canvas = tk.Canvas(root, width = 300, height = 100)
+canvas.pack()
+
+def randomise():
+    connector.start()
+
+button = tk.Button(text = 'Randomise Skin', command = randomise, bg = 'pink', fg = 'black')
+canvas.create_window(150, 50, window = button)
+
+random.seed()
+root.mainloop()
