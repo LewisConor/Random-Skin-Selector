@@ -9,7 +9,7 @@ A Simple Skin Randomiser App for use once Champion is selected in Champ Select. 
 
 ## Disclaimer
 
-This app utilises the official League Client API, and therfore the use of this tool should not be bannable by Riot Games. That said, I can provide no guarantee whatsoever. Use at your own risk!
+This app utilises the official League Client API, and therefore the use of this tool should not be bannable by Riot Games. That said, I can provide no guarantee whatsoever. Use at your own risk!
 
 ## License 
 
