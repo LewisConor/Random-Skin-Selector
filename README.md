@@ -1,12 +1,12 @@
-# Random-Skin-Selector
-A Simple Skin Randomiser App for use once Champion is selected in Champ Select. This app utilises [lcu-driver](https://github.com/sousa-andre/lcu-driver) to access the League Client API.
+# Random Skin Selector
+A Simple Skin Randomizer App for use once Champion is selected in Champ Select. This app utilises [lcu-driver](https://github.com/sousa-andre/lcu-driver) to access the League Client API.
 
 ## How to Use
 
 ### EXE Way
 1. Open RandomSkinSelector.exe
 2. Be in Champ Select and have your Champ Selected.
-3. Click Randomise Skin
+3. Click Randomize Skin
 4. A new skin has been picked from what you own.
 5. Enjoy.
 
