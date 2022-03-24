@@ -129,7 +129,7 @@ def randomize():
     else:
         canvas.delete('all')
 
-        button = tk.Button(root, text = 'randomize Skin', command = randomize, bg = 'pink', fg = 'black')
+        button = tk.Button(root, text = 'Randomize Skin', command = randomize, bg = 'pink', fg = 'black')
         canvas.create_window(250, 25, window = button)
 
         checkbox = tk.Checkbutton(root, text = 'Exclude Default Skin?', variable = filterDefault)
@@ -137,7 +137,7 @@ def randomize():
 
     connector.start()
 
-button = tk.Button(root, text = 'randomize Skin', command = randomize, bg = 'pink', fg = 'black')
+button = tk.Button(root, text = 'Randomize Skin', command = randomize, bg = 'pink', fg = 'black')
 canvas.create_window(250, 25, window = button)
 
 checkbox = tk.Checkbutton(root, text = 'Exclude Default Skin?', variable = filterDefault)
