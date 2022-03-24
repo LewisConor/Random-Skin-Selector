@@ -24,7 +24,7 @@ pip install lcu-driver
 python RandomSkinSelector.py
 ```
 4. Same as the EXE way, after it's opened. Have your Champ Selected in Champ Select
-5. Click Randomise Skin
+5. Click Randomize Skin
 6. A new Skin will be picked from what you own.
 7. Enjoy.
 
