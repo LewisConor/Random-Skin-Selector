@@ -5,10 +5,19 @@ A Simple Skin Randomizer App for use once Champion is selected in Champ Select. 
 
 ### EXE Way
 1. Open RandomSkinSelector.exe
-2. Be in Champ Select and have your Champ Selected.
-3. Click Randomize Skin
-4. A new skin has been picked from what you own.
-5. Enjoy.
+2. Choose Manual or Auto Randomizer
+```
+For Manual:
+Have your Champion Selected in Champ Select. 
+Choose whether to Exclude Default Skin.
+Click Randomize Skin.
+A Skin will be chosen at Random based on what you own.
+
+For Auto:
+Only need to Choose whether to Exclude Default Skin.
+The Rest will be handled automatically.
+```
+3. Enjoy!
 
 ### PY Way
 1. Have Python and Pip Installed.
@@ -23,10 +32,7 @@ pip install lcu-driver
 ```
 python RandomSkinSelector.py
 ```
-4. Same as the EXE way, after it's opened. Have your Champ Selected in Champ Select
-5. Click Randomize Skin
-6. A new Skin will be picked from what you own.
-7. Enjoy.
+4. Same Instructions the EXE way once Open
 
 ## Disclaimer
 
