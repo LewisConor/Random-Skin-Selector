@@ -54,13 +54,8 @@ def cleanUI():
 async def randomizeSkin(connection):
     global filterDefault
     global errorLabel
-<<<<<<< Updated upstream
-
-=======
     
     random.seed()
-    
->>>>>>> Stashed changes
     #Gets Skins from Chosen Champion
     skinList = await connection.request('get', '/lol-champ-select/v1/skin-carousel-skins')
     #Converts Json into Json String
@@ -133,46 +128,6 @@ async def randomizeSkin(connection):
         #Sends Data to League Client
         skinChange = await connection.request('patch', '/lol-champ-select/v1/session/my-selection', data=data)
 
-<<<<<<< Updated upstream
-#For Starting LCU-Driver
-@connector.ready
-async def connect(connection):
-    global connectionLabel
-
-    canvas.create_window(250, 75, window = connectionLabel)
-    await randSkin(connection)
-
-#For Closing LCU-Driver
-@connector.close
-async def close(connection):
-    global disconnectionLabel
-
-    canvas.create_window(250, 200, window = disconnectionLabel)
-
-#Starts the LCU-Driver
-def randomize():
-    global errorLabel
-    global connectionLabel
-    global disconnectionLabel
-    global firstUse
-    global filterDefault
-
-    if(firstUse == True):
-        firstUse = False
-    else:
-        canvas.delete('all')
-
-        button = tk.Button(root, text = 'Randomize Skin', command = randomize, bg = 'pink', fg = 'black')
-        canvas.create_window(250, 25, window = button)
-
-        checkbox = tk.Checkbutton(root, text = 'Exclude Default Skin?', variable = filterDefault)
-        canvas.create_window(250, 50, window = checkbox)
-
-    connector.start()
-
-button = tk.Button(root, text = 'Randomize Skin', command = randomize, bg = 'pink', fg = 'black')
-canvas.create_window(250, 25, window = button)
-=======
 ##Classed Connectors
 #Manual Mode
 class OneUseConnector():
@@ -277,16 +232,11 @@ def manualStart():
     global modeSelected
     modeSelected = True
     cleanUI()
->>>>>>> Stashed changes
 
 ##Starter
 #Applying Starting UI
 cleanUI()
 
 #Starts Code
-<<<<<<< Updated upstream
-random.seed()
 root.mainloop()
-=======
-root.mainloop()
->>>>>>> Stashed changes
+
